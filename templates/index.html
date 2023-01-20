@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h1>home page</h1>
+
+
+<div class="container">
+
+    {% for item in person %}
+    <ul>
+        <li>{{item.name}} ---  ---  </li>
+        <li>{{item.phone}}</li>
+        <li>{{item.email}}</li>
+        <li>{{item.address}}</li>
+        <li>{{item.born}}</li>
+        <li><a href="{% url 'update' item.id %}">edit<a></li>
+        <li><a href="{% url 'delete' item.id %}">delete<a></li>
+        
+    </ul>
+    <hr>
+    {% endfor %}
+    </div>
+{% endblock body %}

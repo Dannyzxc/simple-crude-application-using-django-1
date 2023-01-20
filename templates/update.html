@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h1>home page</h1>
+
+
+<div class="container">
+    <form action="" method="post">
+ {% csrf_token %}
+        <label for="your_name">Your name: </label>
+        <input id="your_name" type="text" name="{{person.name}}" value="{{person.name}}">
+        
+        
+        <label for="your_name">Your name: </label>
+        <input id="your_name" type="text" name="{{person.phone}}" value="{{person.phone}}">
+        
+
+        <label for="your_name">Your name: </label>
+        <input id="your_name" type="text" name="{{person.address}}"  value="{{person.address}}">
+        
+
+        <label for="your_name">Your name: </label>
+        <input id="your_name" type="text" name="{{person.email}}" value="{{person.name}}">
+
+        <label for="your_name">Your name: </label>
+        <input id="your_name" type="text" name="{{person.born}}"  value="{{person.name}}">
+
+        <button type="submit">submit</button>
+    </div>
+    </form>
+{% endblock body %}
